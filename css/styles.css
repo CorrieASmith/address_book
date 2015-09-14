@@ -10,3 +10,7 @@
 .contact:hoover {
   text-decoration: underline;
 }
+
+#show-contact {
+  display: none;
+}
