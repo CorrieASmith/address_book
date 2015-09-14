@@ -1,9 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Address Book</title>
   </head>
   <body>
+    <div class="container">
+    <h1>Address Book</h1>
+    <br>
+      <div class="col-md-6">
+        <form id="new_address">
 
+          <div class="form-group">
+            <input type="text" placeholder="First Name" class="form-control" id="firstName">
+          </div>
+
+          <div class="form-group">
+            <input type="text" placeholder="Last Name" class="form-control" id="lastName">
+          </div>
+
+        <div id="addresses">
+          <div id="new-address">
+            <div class="form-group">
+              <input type="text" placeholder="Address" class="form-control address">
+            </div>
+
+            <div class="form-group">
+              <input type="text" placeholder="City" class="form-control city">
+            </div>
+
+            <div class="form-group">
+              <input type="text" placeholder="State" class="form-control state">
+            </div>
+
+            <div class="form-group">
+              <input type="text" placeholder="Zip" class="form-control zip">
+            </div>
+          </div>
+        </div>
+
+          <button class="btn btn-info">ADD IT!</button>
+          <span class='btn btn-warning' id='add-address'>Add another address</span>
+        </form>
+      </div>
+  </div>
+
+    <div id="result" class="container">
+      <h2>Contacts:</h2>
+        <ul id="contacts">
+
+        </ul>
+      <ul id='addresses'>
+
+      </ul>
+    </div>
   </body>
 </html>
