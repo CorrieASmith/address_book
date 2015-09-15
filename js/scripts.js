@@ -19,7 +19,14 @@ Address.prototype.fullAddress = function() {
   return this.street + ", " + this.city + ", " + this.state;
 }
 
-
+function resetFields() {
+  $("input#firstName").val("");
+  $("input#lastName").val("");
+  $("input.address").val("");
+  $("input.city").val("");
+  $("input.state").val("");
+  $("input.zip").val("");
+}
 
 
 
@@ -59,9 +66,10 @@ $(function() {
 
       newAddress = { address: inputtedAddress, city: inputtedCity, state: inputtedState, zip: inputtedZip };
       newContact.addresses.push(newAddress);
-
     });
 
+  resetFields();
+    
   $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
     $("#result").show();
 
@@ -77,12 +85,5 @@ $(function() {
       $("ul#addresses").append("<li>" + address.address + ", " + address.city + ", " + address.state + ", " + address.zip + "</li>");
     });
   });
-
-  $("input#firstName").val("");
-  $("input#lastName").val("");
-  $("input.address").val("");
-  $("input.city").val("");
-  $("input.state").val("");
-  $("input.zip").val("");
   });
 });
