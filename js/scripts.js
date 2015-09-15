@@ -84,7 +84,5 @@ $(function() {
   $("input.city").val("");
   $("input.state").val("");
   $("input.zip").val("");
-
-
   });
 });
